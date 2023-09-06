@@ -1,0 +1,75 @@
+body{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+
+}
+.container {
+    width: 400px;
+    height: 558px;
+    background-color: gray;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+}
+
+.displayContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    
+
+}
+
+.display {
+    width: 362px;
+    height: 130px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+}
+
+.clrDelContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 10px;
+    gap: 5px;
+    
+}
+
+.clrDelBtn {
+    width: 181px;
+    height: 65px;
+    border-radius: 10px;
+    font-size: x-large;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    gap: 5px;
+
+}
+
+.btn {
+    width: 88px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: x-large;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+}
