@@ -44,7 +44,7 @@ body{
 }
 
 .clrDelContainer {
-    display: flex;
+    display: fl
     justify-content: center;
 
     padding: 5px;
