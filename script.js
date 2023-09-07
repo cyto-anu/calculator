@@ -1,3 +1,5 @@
+//calc logic functions
+
 function add(x,y) {
     return x+y
 }
@@ -41,17 +43,27 @@ const buttons = document.querySelectorAll('.btn');
 
 const clear = document.querySelector('.clrBtn');
 
+const display = document.querySelector('.display')
 
+let storage = []
 
+//
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         console.log(button.textContent);
+        display.textContent = button.textContent;
+        let x = display.textContent;
+        storage.push(x)
+
     });
 });
 
 
+
 clear.addEventListener('click', () => {
     console.log(clear.textContent);
+    console.log(clear.textContent);
+
 });
 
 // NUMBER buttons effects
