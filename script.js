@@ -15,10 +15,10 @@ function divide(x,y) {
 }
 
 
-//these are three variables used to update the display later
-const x
-const operator
-const y
+// these are three variables used to update the display later
+// const x
+// const operator
+// const y
 
 function operate (operator,x,y) {
     if (operator === "add"){
@@ -34,3 +34,69 @@ function operate (operator,x,y) {
         return divide(x,y);
     }
 }
+
+// DOM maniplation and events below
+
+const buttons = document.querySelectorAll('.btn');
+
+const clear = document.querySelector('.clrBtn');
+
+
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(button.textContent);
+    });
+});
+
+
+clear.addEventListener('click', () => {
+    console.log(clear.textContent);
+});
+
+// NUMBER buttons effects
+
+buttons.forEach((button) => {
+    button.addEventListener('mouseenter', () => {
+        button.style.backgroundColor = "lightgray";
+    });
+});
+
+buttons.forEach((button) => {
+    button.addEventListener('mouseleave', () => {
+        button.style.backgroundColor = "";
+    });
+});
+
+buttons.forEach((button) => {
+    button.addEventListener('mousedown', () => {
+        button.style.backgroundColor = "gray";
+    });
+});
+
+buttons.forEach((button) => {
+    button.addEventListener('mouseup', () => {
+        button.style.backgroundColor = "";
+    });
+});
+
+// CLEAR button effects
+
+
+clear.addEventListener('mouseenter', () => {
+    clear.style.backgroundColor = "lightpink";
+});
+
+clear.addEventListener('mouseleave', () => {
+    clear.style.backgroundColor = "";
+});
+
+clear.addEventListener('mousedown', () => {
+    clear.style.backgroundColor = "salmon";
+});
+
+clear.addEventListener('mouseup', () => {
+    clear.style.backgroundColor = "";
+});
+
+//
