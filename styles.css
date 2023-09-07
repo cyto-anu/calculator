@@ -1,14 +1,16 @@
 body{
-    background-color: yellow;
     display: flex;
     justify-content: center;
-    margin-top: 250px;
 
+    background-color: yellow;
+
+    margin-top: 250px;
 }
 .container {
     width: 400px;
     height: 558px;
-    background-color: gray;
+    background-color: darkgray;
+
     border-radius: 15px;
     border-style: solid;
     border-color: black;
@@ -21,23 +23,30 @@ body{
     justify-content: center;
     padding-top: 15px;
     
-
 }
 
 .display {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
     width: 362px;
     height: 130px;
     background-color: white;
+
     border-radius: 10px;
     border-style: solid;
     border-color: black;
     border-width: 2px;
 
+    font-size: xxx-large;
+    font-family:monospace;
 }
 
 .clrDelContainer {
     display: flex;
     justify-content: center;
+
     padding: 5px;
     padding-top: 10px;
     gap: 5px;
@@ -47,12 +56,14 @@ body{
 .clrDelBtn {
     width: 181px;
     height: 65px;
+
     border-radius: 10px;
-    font-size: x-large;
     border-style: solid;
     border-color: black;
     border-width: 2px;
 
+    font-size: xx-large;
+    font-family:monospace;
 }
 
 .btnContainer {
@@ -66,10 +77,21 @@ body{
 .btn {
     width: 88px;
     height: 70px;
+
     border-radius: 10px;
-    font-size: x-large;
     border-style: solid;
     border-color: black;
     border-width: 2px;
 
+    font-size: x-large;
+    font-family:monospace;
+
+}
+
+.solar {
+    background-color:lightblue;
+}
+
+.clrBtn {
+    background-color: pink;
 }
