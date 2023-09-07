@@ -1,7 +1,7 @@
 //calc logic functions
 
 function add(x,y) {
-    return x+y
+    return Number(x)+Number(y)
 }
 
 function subtract(x,y) {
@@ -16,26 +16,36 @@ function divide(x,y) {
     return x/y
 }
 
+//function to limit one operation at a time
+
+function maxStorage () {
+    if (storage.length > 3) {
+        storage.pop();
+    }
+}
 
 // these are three variables used to update the display later
 // const x
 // const operator
 // const y
 
-function operate (operator,x,y) {
-    if (operator === "add"){
+function operate (x,operator,y) {
+    if (operator === "+"){
         return add(x,y);
     }
-    if (operator === "subtract"){
+    if (operator === "-"){
         return subtract(x,y);
     }
-    if (operator === "multiply"){
+    if (operator === "x"){
         return multiply(x,y);
     }
-    if (operator === "divide"){
+    if (operator === "/"){
         return divide(x,y);
     }
 }
+
+let storage = []
+let result = []
 
 // DOM maniplation and events below
 
@@ -45,24 +55,43 @@ const clear = document.querySelector('.clrBtn');
 
 const display = document.querySelector('.display')
 
-let storage = []
+const equals = document.querySelector('.equals')
+
+
 
 //
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.textContent);
-        display.textContent = button.textContent;
-        let x = display.textContent;
-        storage.push(x)
+       
+        storage.push(button.textContent);
+        maxStorage();
+        display.textContent = storage;
+        
+
 
     });
 });
 
 
+//equals logic
+
+equals.addEventListener('click', () => {
+    const firstAns = operate(storage[0],storage[1],storage[2]);
+    result.push(firstAns);
+    display.textContent = operate(storage[0],storage[1],storage[2]);
+
+    //making result = storage
+
+    storage = result;
+    result = [];
+})
+
+//clear logic
 
 clear.addEventListener('click', () => {
-    console.log(clear.textContent);
-    console.log(clear.textContent);
+    storage = [];
+    result = [];
+    display.textContent = storage;
 
 });
 
